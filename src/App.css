@@ -27,4 +27,35 @@
 .read-the-docs {
   color: #888;
 }
+.header {
+  position: fixed;    
+  top: 0;
+  left: 0;
+  width: 100vw;        
+  height: 40px;  
+  background-color: #a4c991;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
 
+.header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
