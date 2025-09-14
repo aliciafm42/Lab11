@@ -1,4 +1,4 @@
-const Header = () => {
+const Header = ({ toggleMode }) => {
   return (
     <header className="header">
       <nav>
@@ -8,6 +8,9 @@ const Header = () => {
           <li><a href="#cards">Trees</a></li>
         </ul>
       </nav>
+      <button className="mode-toggle-btn" onClick={toggleMode}>
+        Toggle Mode
+      </button>
     </header>
   );
 };
