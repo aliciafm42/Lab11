@@ -1,4 +1,3 @@
-/* Root container */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,7 +5,6 @@
   text-align: center;
 }
 
-/* Light & dark mode */
 .app {
   background-color: #ffffff;
   color: #000000;
@@ -87,6 +85,15 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Card Images */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -97,4 +104,64 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Add Profile Form */
+.add-profile-form {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 500px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.add-profile-form input,
+.add-profile-form textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.add-profile-form input:focus,
+.add-profile-form textarea:focus {
+  border-color: #a4c991;
+  box-shadow: 0 0 5px rgba(164, 201, 145, 0.5);
+  outline: none;
+}
+
+.add-profile-form button {
+  padding: 10px 15px;
+  background-color: #a4c991;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-profile-form button:hover {
+  background-color: #89b07d;
+}
+
+/* Messages */
+.error-message {
+  color: #d9534f;
+  font-weight: bold;
+  margin-top: 10px;
+  background: #fbeaea;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.success-message {
+  color: #28a745;
+  font-weight: bold;
+  margin-top: 10px;
+  background: #eafbea;
+  padding: 8px;
+  border-radius: 5px;
 }
