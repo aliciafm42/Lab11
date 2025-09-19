@@ -165,3 +165,14 @@
   padding: 8px;
   border-radius: 5px;
 }
+
+.fetched-section {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 2px solid #ccc;
+}
+
+.fetched-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}

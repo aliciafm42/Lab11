@@ -1,6 +1,13 @@
 const Card = ({ title, description, image }) => (
   <div className="card">
-    {image && <img src={image} alt={title} className="card-image" />}
+    {image && (
+      <img
+        src={image}
+        alt={title}
+        className="card-image"
+        onError={(e) => (e.currentTarget.style.display = "none")}
+      />
+    )}
     <h2>{title}</h2>
     <p>{description}</p>
   </div>

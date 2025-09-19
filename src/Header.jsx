@@ -8,9 +8,7 @@ const Header = ({ toggleMode }) => {
           <li><a href="#cards">Trees</a></li>
         </ul>
       </nav>
-      <button className="mode-toggle-btn" onClick={toggleMode}>
-        Toggle Mode
-      </button>
+      <button className="mode-toggle-btn" onClick={toggleMode}>Toggle Mode</button>
     </header>
   );
 };
