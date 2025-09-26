@@ -1,13 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import AddProfileForm from "../AddProfileForm.jsx";
 
 function AddProfilePage() {
-  const handleAddProfile = (profile) => {
-    console.log("Profile submitted:", profile);
+  const navigate = useNavigate();
+
+  const handleAddProfile = (newProfile) => {
+    console.log("Profile added:", newProfile);
+    navigate("/"); // redirect to homepage
   };
 
   return (
     <div>
-      <h1>Add Profile</h1>
+      <h2>Add Profile</h2>
       <AddProfileForm onAddProfile={handleAddProfile} />
     </div>
   );
