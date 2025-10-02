@@ -1,5 +1,6 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useContext } from "react";
+import { ModeContext } from "./contexts/ModeContext.jsx";
 import "./App.css";
 import Header from "./Header.jsx";
 import Home from "./pages/Home.jsx";
@@ -7,12 +8,11 @@ import AddProfilePage from "./pages/AddProfilePage.jsx";
 import About from "./pages/About.jsx";
 import OtherProfiles from "./pages/OtherProfiles.jsx";
 import NotFound from "./pages/NotFound.jsx";
-import FetchedProfilesPage from "./pages/FetchedProfilesPages.jsx";
+import FetchedProfilePage from "./pages/FetchedProfilesPages.jsx";
 import ProfileDetailPage from "./pages/ProfileDetailPage.jsx";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-  const toggleMode = () => setDarkMode((d) => !d);
+  const { darkMode, toggleMode } = useContext(ModeContext);
 
   return (
     <div className={darkMode ? "app dark" : "app"}>
@@ -24,8 +24,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/other-profiles" element={<OtherProfiles />} />
 
-          {/* Nested Routes */}
-          <Route path="/fetched-profiles" element={<FetchedProfilesPage />}>
+          {/* Fetched profiles page with nested details route */}
+          <Route path="/fetched-profiles" element={<FetchedProfilePage />}>
             <Route path="profile/:id" element={<ProfileDetailPage />} />
           </Route>
 
